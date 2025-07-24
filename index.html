@@ -88,6 +88,62 @@
       color: #555;
     }
 
+    .about-text {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  margin-top: 15px;
+}
+     .insta-follow {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    .insta-icon {
+      width: 30px;
+      height: 30px;
+      animation: pulse 1.5s infinite;
+    }
+.insta-text {
+      font-size: 20px;
+      color: #E1306C;
+      font-weight: bold;
+      font-family: 'Arial', sans-serif;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-5px);
+      }
+    }
+     @keyframes pulse {
+      0% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 0.8;
+      }
+    }
+     .insta-link {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+
+
     @media (max-width: 500px) {
       .profile-box {
         margin: 40px 20px;
@@ -110,7 +166,7 @@
 
   <div class="profile-box">
     <img src="https://teluguone.com/photos/uploadsExt/uploads/Priyanka%20Arul%20Mohan/Priyanka%20Arul%20Mohan%20Pictures/Priyanka-Arul-Mohan-Picture.jpg?crop=faces&fit=crop&h=200&w=200" alt="Profile Photo">
-    <h1>Hi, I'm Jaswanth!</h1>
+    <h1>Hi, I'm Jaswanth Kumar!</h1>
     <p>I love building creative websites, learning new things, and gaming on mobile. Welcome to my digital world!</p>
   </div>
 
@@ -127,6 +183,19 @@
       }
     });
   </script>
+
+  <div  class="about-text">
+ <p Hello! I'm Jaswanth Kumar, a passionate learner and aspiring developer. Welcome to my website!
+</p>
+  </div>
+
+   <div class="insta-follow">
+    <a class="insta-link" href="https://instagram.com/queen_avanthika143" target="_blank">
+      <img class="insta-icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      <span class="insta-text">@queen_avanthika143</span>
+    </a>
+  </div>
+
 
 </body>
 </html>
