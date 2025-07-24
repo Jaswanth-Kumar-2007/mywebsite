@@ -2,43 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Jaswanth's Profile</title>
+  <title>Jaswanth's Creative Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ece9e6, #ffffff);
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff);
+      min-height: 100vh;
+      color: #333;
     }
 
     .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px;
-      background-color: #333;
+      padding: 20px 30px;
+      background-color: rgba(0,0,0,0.6);
       color: white;
     }
 
     .menu-button {
-      font-size: 20px;
+      font-size: 24px;
       cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .menu-button:hover {
+      transform: scale(1.2);
     }
 
     .menu {
       display: none;
       position: absolute;
       top: 60px;
-      right: 20px;
+      right: 30px;
       background-color: white;
-      border: 1px solid #ccc;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-      z-index: 10;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      overflow: hidden;
+      z-index: 999;
     }
 
     .menu a {
       display: block;
-      padding: 10px 20px;
-      color: black;
+      padding: 12px 20px;
+      color: #333;
       text-decoration: none;
     }
 
@@ -46,28 +60,38 @@
       background-color: #f0f0f0;
     }
 
-    .profile {
+    .profile-box {
+      max-width: 400px;
+      background: white;
+      margin: 60px auto;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
       text-align: center;
-      padding: 40px 20px;
     }
 
-    .profile img {
+    .profile-box img {
+      width: 140px;
+      height: 140px;
       border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      border: 3px solid #333;
+      border: 4px solid #66a6ff;
+      margin-bottom: 20px;
     }
 
-    .profile h1 {
-      margin-top: 20px;
+    .profile-box h1 {
       font-size: 28px;
+      margin-bottom: 10px;
     }
 
-    .profile p {
-      font-size: 18px;
-      color: #444;
-      max-width: 500px;
-      margin: 10px auto;
+    .profile-box p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    @media (max-width: 500px) {
+      .profile-box {
+        margin: 40px 20px;
+      }
     }
   </style>
 </head>
@@ -80,27 +104,30 @@
 
   <div class="menu" id="menu">
     <a href="index.html">Home</a>
-    <a href="https://jaswanth-kumar-2007.github.io/websiterequirement/favours.html">My Favours</a>
+    <a href="https://jaswanth-kumar-2007.github.io/websiterequirement/">My Favours</a>
+    <a href="https://www.linkedin.com/in/jaswanth-kumar-kamireddi-86ba09373/">Linkedin</a>
   </div>
 
-  <div class="profile">
-    <img src="https://via.placeholder.com/150" alt="Your Profile Photo">
+  <div class="profile-box">
+    <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?crop=faces&fit=crop&h=200&w=200" alt="Profile Photo">
     <h1>Hi, I'm Jaswanth!</h1>
-    <p>Welcome to my personal website. I love exploring new things, building creative stuff, and expressing myself through tech.</p>
+    <p>I love building creative websites, learning new things, and gaming on mobile. Welcome to my digital world!</p>
   </div>
 
   <script>
     function toggleMenu() {
-      var menu = document.getElementById("menu");
+      const menu = document.getElementById("menu");
       menu.style.display = (menu.style.display === "block") ? "none" : "block";
     }
 
-    window.onclick = function(e) {
-      if (!e.target.matches('.menu-button')) {
+    // Close menu if clicked outside
+    window.addEventListener("click", function(e) {
+      if (!e.target.closest('.menu-button') && !e.target.closest('.menu')) {
         document.getElementById("menu").style.display = "none";
       }
-    }
+    });
   </script>
 
 </body>
 </html>
+
