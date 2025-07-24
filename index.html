@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jaswanth's Profile</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ece9e6, #ffffff);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+    }
+
+    .menu-button {
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+      z-index: 10;
+    }
+
+    .menu a {
+      display: block;
+      padding: 10px 20px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .menu a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .profile {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .profile img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      border: 3px solid #333;
+    }
+
+    .profile h1 {
+      margin-top: 20px;
+      font-size: 28px;
+    }
+
+    .profile p {
+      font-size: 18px;
+      color: #444;
+      max-width: 500px;
+      margin: 10px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div><strong>Jaswanth</strong></div>
+    <div class="menu-button" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <div class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="https://jaswanth-kumar-2007.github.io/websiterequirement/favours.html">My Favours</a>
+  </div>
+
+  <div class="profile">
+    <img src="https://via.placeholder.com/150" alt="Your Profile Photo">
+    <h1>Hi, I'm Jaswanth!</h1>
+    <p>Welcome to my personal website. I love exploring new things, building creative stuff, and expressing myself through tech.</p>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      menu.style.display = (menu.style.display === "block") ? "none" : "block";
+    }
+
+    window.onclick = function(e) {
+      if (!e.target.matches('.menu-button')) {
+        document.getElementById("menu").style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
